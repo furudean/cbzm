@@ -1,0 +1,39 @@
+[project]
+name = "cbzm"
+version = "0.0.1"
+authors = [{ name = "Merilynn Bandy", email = "hello@furudean.com" }]
+description = ""
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "mypy",
+  "flake8",
+  "black",
+  "types-setuptools",
+  "types-Pillow",
+  "types-tqdm",
+]
+
+[project.urls]
+Homepage = "https://github.com/furudean/cbzm"
+Issues = "https://github.com/furudean/cbzm/issues"
+
+[build-system]
+requires = ["setuptools", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+cbzm = "cbzm:main"
+
+[tool.mypy]
+python_version = "3.11"
+exclude = ["build", "dist"]
+strict = true
