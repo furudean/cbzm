@@ -16,7 +16,7 @@ jobs:
 
     environment:
       name: pypi
-      url: https://pypi.org/p/texture_courier
+      url: https://pypi.org/p/cbzm
 
     steps:
       - uses: actions/checkout@v3
