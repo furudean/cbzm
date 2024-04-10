@@ -1,6 +1,6 @@
 [project]
 name = "cbzm"
-version = "0.0.1"
+version = "1.0.0"
 authors = [{ name = "Merilynn Bandy", email = "hello@furudean.com" }]
 description = "cbz merge - merge comic archives"
 readme = "README.md"
