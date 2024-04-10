@@ -13,14 +13,7 @@ classifiers = [
 dependencies = []
 
 [project.optional-dependencies]
-dev = [
-  "mypy",
-  "flake8",
-  "black",
-  "types-setuptools",
-  "types-Pillow",
-  "types-tqdm",
-]
+dev = ["mypy", "flake8", "black", "types-setuptools"]
 
 [project.urls]
 Homepage = "https://github.com/furudean/cbzm"
