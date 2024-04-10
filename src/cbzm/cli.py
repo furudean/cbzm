@@ -2,6 +2,7 @@ import argparse
 from pathlib import Path
 from os.path import splitext
 import sys
+from typing import Any
 import zipfile
 
 from .signal import interrupthandler
@@ -14,19 +15,19 @@ compression_map = {
 }
 
 
-def quote_path(path: Path) -> str:
+def quote_path(path: Path | str) -> str:
     if " " in str(path):
         return f'"{path}"'
     else:
         return str(path)
 
 
-def slice_expression(value):
+def slice_expression(value: str | None) -> slice:
     """
-    Parses a `slice()` from string, like `start:stop:step`
+    parses a `slice()` from string, like `start:stop:step`
     """
     if value:
-        parts = value.split(":")
+        parts: list[Any] = value.split(":")
         if len(parts) == 1:
             # slice(stop)
             parts = [None, parts[0]]
@@ -45,7 +46,7 @@ class Args(argparse.Namespace):
     y: bool
 
 
-def parse_args():
+def parse_args() -> Args:
     parser = argparse.ArgumentParser(
         prog="cbzm",
         description="cbz merge. merge several cbz archives into a single one",
@@ -128,7 +129,7 @@ def main() -> None:
                                 out_file.writestr(file_name, buffer)
 
                         print(
-                            f"{quote_path(archive.filename)} → {len(page_names)} page"
+                            f"{quote_path(archive_path)} → {len(page_names)} page"
                             + ("s" if len(page_names) > 1 else "")
                         )
                 except zipfile.BadZipFile:
