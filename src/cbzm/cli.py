@@ -18,7 +18,7 @@ compression_map = {
 }
 
 
-def pl(value: int | Sized):
+def pl(value: int | Sized) -> str:
     """
     get plural suffix for a value
     """
