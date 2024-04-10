@@ -2,7 +2,7 @@
 name = "cbzm"
 version = "0.0.1"
 authors = [{ name = "Merilynn Bandy", email = "hello@furudean.com" }]
-description = ""
+description = "cbz merge tool"
 readme = "README.md"
 requires-python = ">=3.11"
 classifiers = [
