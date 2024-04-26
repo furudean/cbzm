@@ -4,10 +4,10 @@ cbz merge - merge comic archives
 
 ## installation
 
-it is assumed you have python>=3.11 with pip installed
+it is assumed you have python>=3.11 with [pipx](https://github.com/pypa/pipx) installed
 
 ```
-pip install cbzm
+pipx install cbzm
 ```
 
 ## use
